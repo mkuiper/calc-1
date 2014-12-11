@@ -8,6 +8,11 @@ def add_all(nums):
 def multiply_all(nums):
     return reduce(lambda a, b: a * b, nums)
 
+def diff_all(nums):
+    return reduce(lambda a, b: a - b, nums)
+
+
+
 if __name__ == '__main__':
     command = sys.argv[1]
     nums = map(float, sys.argv[2:])
@@ -15,6 +20,8 @@ if __name__ == '__main__':
         print(add_all(nums))
     elif command == 'multiply':
         print(multiply_all(nums))
+    elif command == 'difference':
+        print(diff_all(nums))
     elif command == 'min':
         print(min(nums))
     else:
