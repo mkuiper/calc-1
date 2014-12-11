@@ -11,6 +11,9 @@ def multiply_all(nums):
 def diff_all(nums):
     return reduce(lambda a, b: a - b, nums)
 
+def div(nums):
+    return reduce(lambda a, b: a / b, nums)
+
 if __name__ == '__main__':
     command = sys.argv[1]
     nums = map(float, sys.argv[2:])
@@ -22,6 +25,8 @@ if __name__ == '__main__':
         print(diff_all(nums))
     elif command == 'min':
         print(min(nums))
+    elif command == 'divide':
+        print(div(nums))
     else:
         usage = ("calc.py [add|multiply|min]"
                  " NUM1 [NUM2 [NUM3 [...]]]")
